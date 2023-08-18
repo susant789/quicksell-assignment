@@ -5,15 +5,23 @@ import "./card.scss";
 import pic from "../assets/human1.jpg";
 import { BsFillCircleFill } from "react-icons/bs";
 
-function Card({ data }) {
+function Card({ data, filter }) {
   return (
     <div className="card">
       <div className="header">
         <span>CAM-5</span>
-        <div className="profile">
-          <img src={pic} alt="profile" />
-          <BsFillCircleFill size={7} className="status border" color="green" />
-        </div>
+        {filter.grouping === "user" ? (
+          <></>
+        ) : (
+          <div className="profile">
+            <img src={pic} alt="profile" className="profile-img" />
+            <BsFillCircleFill
+              size={7}
+              className="status border"
+              color="green"
+            />
+          </div>
+        )}
       </div>
       <div className="body">
         <BiCircle size={14} className="icon" />

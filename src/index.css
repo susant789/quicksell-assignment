@@ -49,6 +49,19 @@ code {
   color: #1115;
 }
 
+.profile-img {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  object-fit: cover;
+  position: relative;
+}
+
+.status {
+  right: 0.6rem;
+  position: relative;
+}
+
 :root {
   --primary-color: #ffff;
   --secondary-color: #f4f5f8;

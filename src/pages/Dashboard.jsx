@@ -49,7 +49,14 @@ function Dashboard() {
       <div className="container">
         {grouped &&
           Object.keys(grouped).map((item) => {
-            return <ListCard key={item} title={item} data={grouped[item]} />;
+            return (
+              <ListCard
+                key={item}
+                filter={filter}
+                title={item}
+                data={grouped[item]}
+              />
+            );
           })}
       </div>
     </div>
